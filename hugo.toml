@@ -1,7 +1,15 @@
 baseURL = "https://aemukit.github.io/"
-locale = "en-us"
-title = "aemukit"
 theme = "hugo-bearblog"
+title = "aemukit"
+author = "aemukit"
+languageCode = "en-US"
+enableRobotsTXT = true
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[permalinks]
+  blog = "/:slug/"
 
 [params]
-showAllPostsOnHomePage = true
+  showAllPostsOnHomePage = true
+  description = "My personal blog"0
