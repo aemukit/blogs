@@ -8,7 +8,7 @@ disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 
 [permalinks]
-  blog = "/:slug/"
+  blog = "/blog/:slug/"
 
 [params]
   showAllPostsOnHomePage = true
