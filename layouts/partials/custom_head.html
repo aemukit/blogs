@@ -1,0 +1,33 @@
+<meta name="description" content="Abdul Mukit — thoughts, plans and blogs by a imperfectionist on the internet">
+<meta name="author" content="aemukit">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph for social previews -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="aemukit">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}aemukit — thoughts, plans and blog by a builder on the internet{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="https://aemukit.me/images/favicon.webp">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@aemukit">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}aemukit — thoughts, plans and blog by a builder on the internet{{ end }}">
+<meta name="twitter:image" content="https://aemukit.me/images/favicon.webp">
+
+<!-- JSON-LD structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "aemukit",
+  "url": "https://aemukit.me",
+  "description": "aemukit — thoughts, plans and blog by a builder on the internet",
+  "author": {
+    "@type": "Person",
+    "name": "aemukit"
+  }
+}
+</script>
