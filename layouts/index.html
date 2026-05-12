@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ .Content }}
+
+<ul>
+  {{ range where site.RegularPages "Type" "not in" (slice "page") }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <span> — {{ .Date.Format "02 Jan 2006" }}</span>
+  </li>
+  {{ end }}
+</ul>
+
+{{ end }}
