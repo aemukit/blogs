@@ -9,6 +9,8 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [permalinks]
   blog = "/blog/:slug/"
+  thoughts = "/thoughts/:slug/"
+  plans = "/plans/:slug/"
 
 [params]
   showAllPostsOnHomePage = true
