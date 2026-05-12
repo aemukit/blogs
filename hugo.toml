@@ -2,3 +2,6 @@ baseURL = "https://aemukit.github.io/"
 locale = "en-us"
 title = "aemukit"
 theme = "hugo-bearblog"
+
+[params]
+showAllPostsOnHomePage = true
