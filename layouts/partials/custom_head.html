@@ -1,0 +1,92 @@
+<style>
+  /* Vintage Porsche Aesthetic */
+  
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Code+Pro&display=swap');
+
+  :root {
+    --bg: #1a1a18;
+    --text: #e8e0d0;
+    --accent: #c8a951;
+    --secondary: #8b4513;
+    --link: #c8a951;
+    --border: #3a3a35;
+  }
+
+  body {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+    font-family: 'Playfair Display', serif !important;
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif !important;
+    color: var(--accent) !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: var(--link) !important;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+  }
+
+  a:hover {
+    border-bottom: 1px solid var(--accent);
+  }
+
+  nav {
+    border-bottom: 1px solid var(--border) !important;
+    padding-bottom: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.85em;
+  }
+
+  footer {
+    border-top: 1px solid var(--border) !important;
+    color: #666 !important;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+  }
+
+  ul li {
+    border-bottom: 1px solid var(--border);
+    padding: 8px 0;
+    list-style: none;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  marquee {
+    color: var(--accent) !important;
+    font-family: 'Source Code Pro', monospace !important;
+    font-size: 0.75em;
+    opacity: 0.7;
+  }
+
+  /* Pinned post highlight */
+  h3 {
+    color: var(--secondary) !important;
+    font-size: 0.8em;
+    letter-spacing: 4px;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Max width for readability */
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+</style>

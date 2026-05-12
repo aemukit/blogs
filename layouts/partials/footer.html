@@ -1,9 +1,29 @@
-<p>
-  <a href="https://twitter.com/aemukit">x</a>
-</p>
+{{ define "main" }}
+{{ .Content }}
 
-<div style="overflow:hidden; white-space:nowrap; border-top: 1px solid #ccc; padding-top: 8px; margin-top: 16px;">
-  <marquee behavior="scroll" direction="left" scrollamount="3">
-    🚂💨 choo choo... ████░░ riding through the fog... 🌫️🌫️ &nbsp;&nbsp;&nbsp; 🚃🚃🚃 next stop: the internet... 🌫️💨 choo choo... ████░░ 🚂
-  </marquee>
-</div>
+{{ $pinned := where site.RegularPages "Params.pin" true }}
+{{ if $pinned }}
+<p>PINNED</p>
+<ul>
+  {{ range $pinned }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+<hr>
+{{ end }}
+
+<p>LATEST</p>
+<ul>
+  {{ range site.RegularPages }}
+  {{ if and (ne .Type "page") (ne (.Param "pin") true) }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <span> — {{ .Date.Format "02 Jan 2006" }}</span>
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>
+
+{{ end }}
