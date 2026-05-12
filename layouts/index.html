@@ -3,7 +3,6 @@
 
 {{ $pinned := where site.RegularPages "Params.pin" true }}
 {{ if $pinned }}
-<p>pinned</p>
 <ul>
   {{ range $pinned }}
   <li>
