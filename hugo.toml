@@ -15,3 +15,4 @@ ignoreErrors = ["error-disable-taxonomy"]
 [params]
   showAllPostsOnHomePage = true
   description = "My personal blog"
+  hideMadeWithLine = true
