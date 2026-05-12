@@ -1,0 +1,4 @@
+baseURL = "https://aemukit.github.io/"
+languageCode = "en-us"
+title = "aemukit"
+theme = "hugo-bearblog"	
