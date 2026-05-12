@@ -1,5 +1,5 @@
 +++
-title = "Thoughts"
+title = "thoughts"
 menu = "main"
 weight = 3
 +++
