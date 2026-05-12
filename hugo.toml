@@ -16,3 +16,4 @@ ignoreErrors = ["error-disable-taxonomy"]
   showAllPostsOnHomePage = true
   description = "My personal blog"
   hideMadeWithLine = true
+  favicon = "images/favicon.webp"

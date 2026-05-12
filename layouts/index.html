@@ -1,12 +1,28 @@
 {{ define "main" }}
 {{ .Content }}
 
+{{ $pinned := where site.RegularPages "Params.pin" true }}
+{{ if $pinned }}
+<h3>📌 Pinned</h3>
 <ul>
-  {{ range where site.RegularPages "Type" "not in" (slice "page") }}
+  {{ range $pinned }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+<hr>
+{{ end }}
+
+<h3>Latest</h3>
+<ul>
+  {{ range where site.RegularPages "Params.pin" "!=" true }}
+  {{ if ne .Type "page" }}
   <li>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
     <span> — {{ .Date.Format "02 Jan 2006" }}</span>
   </li>
+  {{ end }}
   {{ end }}
 </ul>
 
