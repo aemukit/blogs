@@ -1,29 +1,5 @@
-{{ define "main" }}
-{{ .Content }}
-
-{{ $pinned := where site.RegularPages "Params.pin" true }}
-{{ if $pinned }}
-<p>PINNED</p>
-<ul>
-  {{ range $pinned }}
-  <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-  </li>
-  {{ end }}
-</ul>
-<hr>
-{{ end }}
-
-<p>LATEST</p>
-<ul>
-  {{ range site.RegularPages }}
-  {{ if and (ne .Type "page") (ne (.Param "pin") true) }}
-  <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    <span> — {{ .Date.Format "02 Jan 2006" }}</span>
-  </li>
-  {{ end }}
-  {{ end }}
-</ul>
-
-{{ end }}
+<p>
+  <a href="https://github.com/aemukit">gh</a> |
+  <a href="https://twitter.com/aemukit">x</a> |
+  <a href="https://instagram.com/yourhandle">gm</a>
+</p>

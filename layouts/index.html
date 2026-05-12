@@ -3,7 +3,7 @@
 
 {{ $pinned := where site.RegularPages "Params.pin" true }}
 {{ if $pinned }}
-<h3>📌 Pinned</h3>
+<p>pinned</p>
 <ul>
   {{ range $pinned }}
   <li>
@@ -14,10 +14,9 @@
 <hr>
 {{ end }}
 
-<h3>Latest</h3>
 <ul>
-  {{ range where site.RegularPages "Params.pin" "!=" true }}
-  {{ if ne .Type "page" }}
+  {{ range site.RegularPages }}
+  {{ if and (ne .Type "page") (ne (.Param "pin") true) }}
   <li>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
     <span> — {{ .Date.Format "02 Jan 2006" }}</span>
