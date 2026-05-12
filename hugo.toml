@@ -12,4 +12,4 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
   showAllPostsOnHomePage = true
-  description = "My personal blog"0
+  description = "My personal blog"
